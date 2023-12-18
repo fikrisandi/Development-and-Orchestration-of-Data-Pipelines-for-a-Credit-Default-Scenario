@@ -1,0 +1,91 @@
+1. Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+
+Jawaban :
+NoSQL adalah istilah umum yang merujuk pada jenis sistem database yang berbeda dari model relasional tradisional (Relational Database Management System atau RDBMS).
+Sistem NoSQL dirancang untuk menangani volume data yang besar, skema data yang fleksibel, dan distribusi data secara efisien.
+Model data dalam sistem NoSQL dapat berupa dokumen, grafik, key-value, wide-column store, atau jenis lainnya, tergantung pada kebutuhan aplikasi.
+
+2. Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+
+Jawaban :
+- Gunakan NoSQL Ketika:
+    a. Skalabilitas Horizontal Diperlukan            :
+    NoSQL sering kali lebih baik dalam menangani pertumbuhan horizontal (penambahan node atau server) dibandingkan RDBMS.
+    
+    b. Data Tidak Terstruktur atau Semi-Terstruktur  :
+    Jika data Anda memiliki struktur yang tidak pasti atau sering berubah, NoSQL dapat memberikan fleksibilitas yang lebih besar.
+    
+    c. Performa Baca-Tulis yang Tinggi               :
+    NoSQL biasanya sangat baik dalam menangani banyak permintaan baca-tulis secara bersamaan.
+
+- Gunakan RDBMS Ketika:
+    a. Integritas Data dan Relasi yang Penting       :
+    Jika kebutuhan aplikasi Anda sangat memerlukan ketergantungan antar tabel dan integritas referensial, RDBMS mungkin lebih cocok.
+    
+    b. Skema yang Tetap                              :
+    Jika struktur data Anda relatif stabil dan tidak berubah secara signifikan, RDBMS dengan skema yang terdefinisi baik dapat memberikan keamanan dan struktur data yang konsisten.
+    
+    c. Transaksi ACID Diperlukan                     :
+    Jika transaksi yang konsisten, terisolasi, dan tahan terhadap kegagalan sangat penting, RDBMS menyediakan dukungan untuk transaksi ACID.
+
+3. Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+
+Jawaban :
+- Keunggulan MongoDB   :
+    a. Dokumen Data Model                            :
+    MongoDB menggunakan format BSON (Binary JSON) untuk menyimpan data dalam format dokumen JSON. Ini memberikan fleksibilitas dalam menyimpan data semi-terstruktur.
+    
+    b. Skalabilitas Horizontal yang Baik             :
+    Cocok untuk aplikasi dengan pertumbuhan data yang cepat (start-up).
+
+    c. Indeks yang Kuat                              :
+    Mendukung indeks yang kompleks untuk meningkatkan kinerja pencarian dan pemfilteran.
+
+- Keunggulan Cassandra:
+    a. Skalabilitas Linier                           :
+    Dapat diperluas secara linier dengan menambahkan node ke cluster, cocok untuk distribusi data besar.
+    
+    b. Toleransi Terhadap Kegagalan                  :
+    Dirancang untuk menjadi tahan terhadap kegagalan dan memiliki mekanisme untuk mengatasi kegagalan node atau partisi.
+    
+    c. Model Data Wide-Column                        :
+    Cocok untuk menyimpan dan mengambil data kolom lebar dengan cepat.
+
+4. Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+
+Apache Airflow merupakan sebuah platform open-source untuk mengelola, menjadwalkan, dan memantau alur kerja (workflows) dengan menggunakan konsep Directed Acyclic Graphs (DAGs) dalam kode Python.
+Setiap DAG merepresentasikan serangkaian tugas yang dijalankan berurutan dan saling bergantung.
+Keunggulan Airflow mencakup kemampuan mengatasi alur kerja kompleks, penjadwalan tugas dengan ketergantungan yang beragam, serta otomatisasi eksekusi tugas berdasarkan aturan waktu atau peristiwa tertentu.
+Antarmuka pengguna berbasis web menyediakan visibilitas yang intuitif terhadap status eksekusi, log, dan metadata DAG.
+Airflow sangat bermanfaat untuk mengotomatiskan tugas-tugas berulang, terutama dalam pengelolaan alur kerja ETL, pengolahan data, dan tugas-tugas terjadwal di lingkungan skala besar.
+Kemampuannya dalam menangani alur kerja yang rumit membuatnya menjadi pilihan populer bagi pengembang dan data engineer dalam mengelola proses-proses yang terstruktur dan terjadwal.
+
+5. Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+
+Great Expectations adalah kerangka kerja open-source untuk mengelola dan memvalidasi ekspektasi terhadap data.
+Ini memberikan alat dan praktik struktural untuk memastikan integritas dan kualitas data. 
+Pengguna dapat mendefinisikan ekspektasi, seperti batasan nilai, distribusi, atau hubungan antar kolom.
+Great Expectations secara otomatis memvalidasi data terhadap ekspektasi, memberikan laporan tentang deviasi atau ketidaksesuaian.
+Keuntungan termasuk kemampuan mendefinisikan ekspektasi deklaratif, validasi otomatis, dokumentasi data otomatis, dan integrasi dengan alat analisis data dan manajemen aliran kerja seperti Apache Airflow.
+Dengan Great Expectations, menjaga kualitas dan mengelola ekspektasi data menjadi lebih mudah dalam proyek pengembangan dan pemantauan data.
+
+6. Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+
+Batch Processing adalah cara pemrosesan data di mana sejumlah besar data diproses secara bersamaan dalam unit waktu tertentu, tanpa memerlukan respons waktu cepat seperti pada pemrosesan real-time. Ini melibatkan pengumpulan, penyimpanan, dan pemrosesan data dalam batch yang lebih besar.
+
+Contoh Kasus Penggunaan:
+1. ETL (Extract, Transform, Load): Mengambil, transformasi, dan memuat data dari berbagai sumber ke dalam sistem penyimpanan data.
+2. Pemrosesan Keuangan Bulanan: Mengolah data keuangan bulanan untuk laporan laba rugi dan keuangan.
+3. Pembaruan Sistem: Memperbarui perangkat lunak atau sistem operasi pada server.
+
+Tools yang Sering Digunakan:
+1. Apache Hadoop: Mendukung pemrosesan batch pada data besar.
+2. Apache Spark: Platform umum untuk batch processing dan pemrosesan real-time.
+3. Apache Flink: Framework untuk data streaming dan batch processing.
+4. Apache Airflow: Manajemen aliran kerja untuk menjadwalkan dan mengelola tugas batch.
+
+Langkah-langkah Pemrosesan Batch:
+1. Input: Menerima data dari berbagai sumber.
+2. Pre-processing: Persiapan data dengan membersihkan dan menyortir.
+3. Proses Utama: Pemrosesan data sesuai kebutuhan.
+4. Output: Menyimpan atau mengirim hasil pemrosesan.
